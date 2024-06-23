@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam by Kevin Andra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="min-h-screen flex flex-col justify-center items-center bg-gray-400">
+            <div class="w-[80%] sm:h-[80vh] h-[65vh] flex flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-lg bg-white">
+                <div class="text-center">
+                    <h1 class="text-2xl font-semibold">Cek Khodam</h1>  
+                    <p>By : @kviinandr</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center mt-8 w-4/5 mx-auto space-y-4 sm:space-y-0 sm:space-x-4">
+                    <input type="text" id="inputName" autocomplete="off" placeholder="Cari tahu apa khodam dalam tubuhmu" class="text-[10px] border border-gray-300 rounded-lg p-2 w-full sm:w-1/2">
+                    <div class="flex space-x-4">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg duration-300 ease-in-out" id="btnCheck" type="submit">Cek</button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg duration-300 ease-in-out" id="btnReset">Reset</button>
+                    </div>
+                </div>
+                <p class="text-red-500 hidden text-sm mt-4" id="error">Silahkan isi nama terlebih dahulu!</p>
+
+                <p class="text-center text-[8px] absolute bottom-4 font-medium">Created By Kevin Andra</p>
+                <p class="text-center text-4xl absolute top-7 font-bold">KhodamKu</p>
+
+            </div>
+
+            <div class="fixed inset-0 bg-black opacity-50 z-10 hidden" id="overlay"></div>
+
+            <div class="z-20 sm:w-[50%] sm:h-[50vh] h-[40vh] w-[90%] absolute hidden flex-col justify-center items-center rounded-xl overflow-hidden shadow-2xl bg-white " id="overlayResult">
+                <h1 class="text-xl font-medium w-[80%] mx-auto text-center">Khodam <span id="getName"></span> hari ini adalah...</h1>
+
+                <!-- loading -->
+                <div id="loading" class="loader my-10 hidden"></div>
+
+                <!-- result -->
+                <div id="result" class="text-3xl font-semibold w-[80%] justify-center py-10 hidden">
+                    <span id="resultText"></span>
+                </div>
+
+                <button class="bg-red-500 hover:bg-red-700 text-white font-medium text-sm py-2 px-3 rounded-lg duration-300 ease-in-out" id="btnBack">Coba Nama Lain</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
